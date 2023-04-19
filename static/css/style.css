@@ -1,0 +1,99 @@
+.container{
+    margin: 30px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 350px;
+}
+
+.incorrect{
+    font-weight: bold;
+    color: crimson;
+}
+
+.correct{
+    font-weight: bold;
+    color: green;
+}
+
+
+.btn {
+    border: none; 
+    color: white; 
+    padding: 5px 5px;
+    font-weight: 600; 
+    font-size: 12px;
+    cursor: pointer; 
+  }
+  
+  .success {background-color: #04AA6D;} 
+  .success:hover {background-color: #46a049;}
+
+.space{
+    margin-bottom: 40px;
+}
+
+.date, .id1, .id2{
+    font-size: 14px;
+    padding: 5px 0 5px 0;
+}
+
+.gender{
+    font-size: 16px;
+    padding: 5px 0 5px 0;
+}
+
+.id2{
+    outline: none;
+}
+
+
+#msg{
+    font-size: 12px;
+    color: red;
+
+}
+
+.id1{
+    border:2px solid gray;
+    border-right: none;
+    margin-right: -10px;
+    
+    
+}
+
+.id2{
+    border:2px solid gray;
+    border-left: none;
+    width: 55%;
+}
+
+.labels{
+    font-weight: 700;
+}
+
+.box-red{
+    
+    border-top:2px solid red;
+    border-right:2px solid red;
+    border-bottom:2px solid red;
+    
+}
+
+.box-black{
+    outline: none;
+    border-top:2px solid gray;
+    border-right:2px solid gray;
+    border-bottom:2px solid gray;
+
+    
+}
+

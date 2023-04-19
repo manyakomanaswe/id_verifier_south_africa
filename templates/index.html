@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='css/style.css') }}">
+    
+    <!-- <script src="{{ url_for('static', filename='js/utils.js') }}"></script>  -->
+    <title>Verify {%if id%}| {{id}}{%endif%}</title>
+</head>
+<body>
+   
+    <div class="container">
+        <h4 class="space">Identity Verification App</h4>
+        <div>
+            <form action="{{ url_for('is_id_valid')}}" method="post" class="inputs">
+
+                
+                <label class="labels" for="gender">Gender</label>
+                <select class="gender" name="gender" id="gender" onchange="resetID()">
+                    <option value="m">Male</option>
+                    <option value="f">Female</option>
+                </select>
+                
+                <label class="labels" for="date">Date of Birth</label>
+                <input class="date" type="date" id="date" size="80" name="date" onchange="setID()">
+
+                
+                <div>
+                    <label class="labels" for="id1">Identity Number</label>
+                    <input class="id1" id="id1" type="text" name="first" size="3" onclick="focusRestOfID()"> 
+                    <input class="id2" id="id2" type="text" name="identity" size="16" onkeyup="verify()" > 
+                    <input class="id3" id="id3" type="hidden" name="hidden_input" >
+                    <div>
+                        <small id="msg"></small>
+                    </div>
+
+                </div>
+               
+                <button id="btn" class="btn success" type="submit">Verify</button>
+            </form>
+        </div>
+    
+        <div>
+            {%if id%}
+                    {%if result%}
+                         <p>ID number: <span class="correct">{{id}}</span> is Valid</p>
+                    {%else%}
+                         <p>ID number: <span class="incorrect">{{id}}</span> is NOT Valid</p>
+                    {%endif%}
+            {%endif%}
+            
+        </div>
+    </div>
+    
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
