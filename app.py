@@ -4,11 +4,6 @@ from id_verifier import verify_id
 
 app = Flask(__name__)
 
-# @app.route("/")
-# def verify_id_form():
-#     return "hello"
-
-# id = '8511235591086'
 
 @app.route("/", methods=['GET'])
 @app.route("/verify", methods=['GET','POST'])
